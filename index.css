@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+body{
+    background-color: blueviolet;
+    color: aliceblue;
+}
+.cointainer{
+    width: 90%;
+    max-width: 700px;
+    margin: 12%;
+   }
+.cointainer h1{
+    color:antiquewhite;
+    font-size: 50px;
+    font-weight: 700;
+}
+.cointainer span{
+    color: rgb(229, 236, 45);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 12px;
+    border-width: 90%;
+   letter-spacing: 3px;
+   border-bottom: 2px solid black;
+   padding-bottom: 12px;
+   
+}
+.display{
+ margin: 30px 0px;
+ width: 40%;
+ padding: 15px;
+ background-color: white;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.display input{
+  border: 0;
+  outline: 0;
+
+}
+.display button{
+    outline: 0;
+    border: 0;
+    background-color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+.cointainer #btn{
+    padding: 10px;
+    font-size: 18px;
+    background-color: gold;
+    color:rgb(44, 32, 4);
+    border-radius: 10px;
+    font-weight: 600;
+}

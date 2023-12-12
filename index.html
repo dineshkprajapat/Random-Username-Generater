@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+  
+    <title>Random UserName </title>
+
+</head>
+<body>
+    <div class="cointainer">
+        <h1> Create A <br><span>UserName</span></h1>
+        <div class="display">
+            <input type="text" id="username" placeholder="Enter UserName " />
+            <button onclick="copyusername()"> Copy </button>
+        </div>
+        <button id="btn" onclick="userinput()"> Generate UserName </button>
+    </div>
+    <script>
+        const UsernameBox = document.getElementById("username");
+
+const lenght = 10;
+
+const uppercase = "AQWERTYUIOPASDFGHJKLZXCVBNM";
+const number = "1234567890";
+const lowercase = "qwertyuiopasdfghjklzxcvbnm";
+
+const alltwo = uppercase + lowercase  +  number ;
+
+function userinput(){
+    let Username = "";
+
+    Username += uppercase[Math.floor(Math.random()* uppercase.length)];
+    Username += lowercase[Math.floor(Math.random()* lowercase.length)];
+    Username += lowercase[Math.floor(Math.random()* lowercase.length)];
+    Username += lowercase[Math.floor(Math.random()* lowercase.length)];
+    Username += lowercase[Math.floor(Math.random()* lowercase.length)];
+    Username += lowercase[Math.floor(Math.random()* lowercase.length)];
+    Username += number[Math.floor(Math.random()* number.length)];
+    Username += number[Math.floor(Math.random()* number.length)];
+    Username += number[Math.floor(Math.random()* number.length)];
+     Username += number[Math.floor(Math.random()* number.length)];
+
+    while(lenght > Username.length){
+         Username += alltwo[Math.floor(Math.random() * alltwo.length)]; 
+    }
+    UsernameBox.value = Username;
+}
+
+ function copyusername(){
+    UsernameBox.select();
+    document.execCommand("copy");
+ }
+    </script>
+</body>
+</html>
